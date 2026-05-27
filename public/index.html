@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Dev Control Plane</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Dev Control Plane</h1>
+    </header>
+    <main>
+      <section class="status-card">
+        <div class="info-row">
+          <span class="label">プロジェクト名</span>
+          <span class="value">AI Dev Control Plane</span>
+        </div>
+        <div class="info-row">
+          <span class="label">現在の状態</span>
+          <span class="value status-running">Running</span>
+        </div>
+        <div class="info-row">
+          <span class="label">最終更新日時</span>
+          <span class="value" id="last-updated">—</span>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    document.getElementById('last-updated').textContent = new Date().toLocaleString('ja-JP');
+  </script>
+</body>
+</html>
