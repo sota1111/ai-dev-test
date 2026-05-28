@@ -31,3 +31,10 @@ ai-dev-test/
 - プロジェクト名: AI Dev Control Plane
 - 現在の状態: Running
 - 最終更新日時: ページロード時の日時を自動表示
+
+## Lint
+
+```bash
+npm install
+npm run lint
+```
