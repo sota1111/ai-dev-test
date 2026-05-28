@@ -46,3 +46,10 @@ npm install
 npx playwright install chromium
 npm run test:e2e
 ```
+
+## Unit Test
+
+```bash
+npm install
+npm run test
+```

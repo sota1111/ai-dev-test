@@ -9,7 +9,9 @@ export default [
       sourceType: "script",
       globals: {
         document: "readonly",
-        window: "readonly"
+        window: "readonly",
+        module: "writable",
+        exports: "writable"
       }
     }
   }
