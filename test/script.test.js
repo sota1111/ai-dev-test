@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { getJapanTimeString } from '../public/script.js';
+import { describe, it, expect, vi } from 'vitest';
+import { getJapanTimeString, getHealthStatus, updateHealthDisplay } from '../public/script.js';
 
 describe('getJapanTimeString', () => {
   it('現在日時の文字列が生成できること', () => {
@@ -21,5 +21,26 @@ describe('getJapanTimeString', () => {
   it('Last Updated用の表示文字列が生成できること', () => {
     const result = getJapanTimeString();
     expect(typeof result).toBe('string');
+  });
+});
+
+describe('getHealthStatus', () => {
+  it("getHealthStatus('ok') returns 'OK'", () => {
+    expect(getHealthStatus('ok')).toBe('OK');
+  });
+
+  it("getHealthStatus('error') returns 'Unknown'", () => {
+    expect(getHealthStatus('error')).toBe('Unknown');
+  });
+
+  it("getHealthStatus('unknown') returns 'Unknown'", () => {
+    expect(getHealthStatus('unknown')).toBe('Unknown');
+  });
+});
+
+describe('updateHealthDisplay', () => {
+  it('does not throw when no DOM elements present', () => {
+    // Ensure we are in a non-browser environment or mock document
+    expect(() => updateHealthDisplay()).not.toThrow();
   });
 });
