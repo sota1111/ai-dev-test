@@ -38,3 +38,11 @@ ai-dev-test/
 npm install
 npm run lint
 ```
+
+## E2E Test
+
+```bash
+npm install
+npx playwright install chromium
+npm run test:e2e
+```
