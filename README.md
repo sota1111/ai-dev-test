@@ -53,3 +53,10 @@ npm run test:e2e
 npm install
 npm run test
 ```
+
+## TypeCheck
+
+```bash
+npm install
+npm run typecheck
+```
